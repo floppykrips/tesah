@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Sayang ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.container{
+    text-align:center;
+    color:white;
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:18px;
+    margin:10px;
+}
+
+#mulai{
+    background:white;
+    color:#ff4d6d;
+}
+
+#halaman2,
+#halaman3{
+    display:none;
+}
+
+#ya{
+    background:#4CAF50;
+    color:white;
+}
+
+#tidak{
+    background:#ff3333;
+    color:white;
+    position:absolute;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Halaman 1 -->
+    <div id="halaman1">
+        <h1>Haloo Sayang ❤️</h1>
+        <button id="mulai">Mulai</button>
+    </div>
+
+    <!-- Halaman 2 -->
+    <div id="halaman2">
+        <h1>Kamu Masih Sayang aku Ga? 🥺❤️</h1>
+        <button id="ya">Ya</button>
+        <button id="tidak">Tidak</button>
+    </div>
+
+    <!-- Halaman 3 -->
+    <div id="halaman3">
+        <h1>💖 MWHWHEHEHEHE 💖</h1>
+        <h2>LOVE YOU SAYANG ❤️😘</h2>
+    </div>
+
+</div>
+
+<script>
+const mulai = document.getElementById("mulai");
+const halaman1 = document.getElementById("halaman1");
+const halaman2 = document.getElementById("halaman2");
+const halaman3 = document.getElementById("halaman3");
+const ya = document.getElementById("ya");
+const tidak = document.getElementById("tidak");
+
+mulai.onclick = () => {
+    halaman1.style.display = "none";
+    halaman2.style.display = "block";
+};
+
+ya.onclick = () => {
+    halaman2.style.display = "none";
+    halaman3.style.display = "block";
+};
+
+function pindahTombol() {
+    const x = Math.random() * (window.innerWidth - 120);
+    const y = Math.random() * (window.innerHeight - 60);
+
+    tidak.style.left = x + "px";
+    tidak.style.top = y + "px";
+}
+
+tidak.addEventListener("mouseover", pindahTombol);
+tidak.addEventListener("click", pindahTombol);
+</script>
+
+</body>
+</html>
